@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.one{
+		width: 100px;
+		height: 100px;
+		background-color: skyblue;
+		transition: width 2s;
+		transition: all 2s;
+	}
+	.one:hover{
+		width: 250px;
+		transform: translateX(50px);
+	}
+	.two{
+		width: 100px;
+		height: 100px;
+		background-color: green;
+	}
+	.two:hover{
+		animation: my 3s;
+		}
+		@keyframes my{
+			from{
+				transform: translate(0,0);
+			}
+			to{
+				transform: translate(50px,0);
+			}
+			0%{
+			background-color: skyblue;
+		}
+		30%{
+			background-color: green;
+		}
+		50%{
+			background-color: yellow;
+		}
+		100%{
+			background-color: skyblue;
+		}
+		}
+		p{
+			width: 100px;
+			height: 50px;
+			font-size: 30px;
+			color: pink;
+			background-color: blue;
+			transform: translate(50px,50px);
+		}
+		p:hover{
+			animation: happy 1s;
+		}
+		@keyframes happy{
+			0%,40%,100%{
+				transform: translate(50px,50px);
+			}
+			60%,80%{
+				transform: translate(50px,-100px);
+			}
+			20%{
+				transform: translate(50px,-150px);
+			}
+		}
+
+	
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+	<p>开心~</p>
+	
+</body>
+</html>
